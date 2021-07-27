@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>especies</title>
+        <!-- CSS only -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand p-3" href="/listar_espoecies">Especies</a>
+        </nav>
+
+        <div class="container mt-5">
+            <div class="row">
+              <div class="col-md-5 offset-md-3 card">
+                <div class="card-body">
+                  <form action="/actualizar/<%= data.id %>" method="POST">
+                    <div class="form-group">
+                      <input type="text" name="especie" value="<%= data.especie%>" placeholder="<%= data.especie%>" class="form-control" autofocus>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" name="familia" value="<%= data.familia%>" placeholder="familia" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="nombre_comun" value="<%= data.nombre_comun%>" placeholder="nombre comun" class="form-control">
+                      </div>
+                    <div class="form-group">
+                      <input type="text" name="proyecto" value="<%= data.proyecto%>" placeholder="proyecto" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="identificador" value="<%= data.identificador%>" placeholder="identificador" class="form-control" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="departamento" value="<%= data.departamento%>" placeholder="departamento" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="municipio" value="<%= data.municipio%>" placeholder="municipio" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="localidad" value="<%= data.localidad%>" placeholder="localidad" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="latitud" value="<%= data.latitud%>" placeholder="latitud" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="autor" value="<%= data.autor%>" placeholder="autor" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="fecha_captura" value="<%= data.fecha_captura%>" placeholder="fecha captura" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="ecorregion" value="<%= data.ecorregion%>" placeholder="ecorregion" class="form-control">
+                    </div>
+          
+                    <button type="submit" class="btn btn-primary">
+                      Actualizar especie
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+        </div>
+
+    </body>
+</html>
