@@ -3,8 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <title>especies</title>
-        <!-- CSS only -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </head>
     <body>
         <nav class="navbar navbar-dark bg-dark">
@@ -17,13 +22,13 @@
                 <div class="card-body">
                   <form action="/actualizar/<%= data.id %>" method="POST">
                     <div class="form-group">
-                      <input type="text" name="especie" value="<%= data.especie%>" placeholder="<%= data.especie%>" class="form-control" autofocus>
+                      <input type="text" name="nombre_comun" value="<%= data.nombre_comun%>" placeholder="nombre_comun" class="form-control" autofocus>
                     </div>
                     <div class="form-group">
-                      <input type="text" name="familia" value="<%= data.familia%>" placeholder="familia" class="form-control">
+                      <input type="text" name="especie" value="<%= data.especie%>" placeholder="especie" class="form-control">
                     </div>
                     <div class="form-group">
-                        <input type="text" name="nombre_comun" value="<%= data.nombre_comun%>" placeholder="nombre comun" class="form-control">
+                        <input type="text" name="familia" value="<%= data.nombre_comun%>" placeholder="nombre comun" class="form-control">
                       </div>
                     <div class="form-group">
                       <input type="text" name="proyecto" value="<%= data.proyecto%>" placeholder="proyecto" class="form-control">
@@ -44,10 +49,13 @@
                         <input type="text" name="latitud" value="<%= data.latitud%>" placeholder="latitud" class="form-control">
                     </div>
                     <div class="form-group">
+                      <input type="text" name="longitud" value="<%= data.longitud%>" placeholder="longitud" class="form-control">
+                    </div>
+                    <div class="form-group">
                         <input type="text" name="autor" value="<%= data.autor%>" placeholder="autor" class="form-control">
                     </div>
                     <div class="form-group">
-                        <input type="text" name="fecha_captura" value="<%= data.fecha_captura%>" placeholder="fecha captura" class="form-control">
+                        <input type="text" name="fecha_captura" value="<%= data.fecha_captura%>" placeholder="fecha_captura" class="form-control">
                     </div>
                     <div class="form-group">
                         <input type="text" name="ecorregion" value="<%= data.ecorregion%>" placeholder="ecorregion" class="form-control">

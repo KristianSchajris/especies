@@ -22,7 +22,7 @@
                         <form action="/agrgar_especie" method="post">
                             <div class="row">
                                 <div class="col">
-                                    <div class="form-grup col-md-6">
+                                    <div class="form-grup">
                                         <input name="nombre_comun" type="text" placeholder="nombre comun">
                                     </div>
                                 </div>
@@ -96,7 +96,7 @@
                             <div class="row">
                                 <div class="col">
                                     <div class="form-grup">
-                                        <input name="fecha_captura" type="text" class="form-control" placeholder="fecha_captura">
+                                        <input name="fecha_captura" type="text" class="form-control" placeholder="YY-MM-DD">
                                     </div>
                                 </div>
                                 <div class="col">
@@ -123,7 +123,7 @@
                                     <td>n°</td>
                                     <td>especie</td>
                                     <td>familia</td>
-                                    <td>nombre_comun</td>
+                                    <td>nombre comun</td>
                                     <td>proyecto</td>
                                     <td>identificador</td>
                                     <td>departamento</td>
@@ -132,6 +132,7 @@
                                     <td>latitud</td>
                                     <td>longitud</td>
                                     <td>autor</td>
+                                    <td>fecha_captura</td>
                                     <td>ecorregion</td>
                                     <td>acciones</td>
                                 </thead>
@@ -143,13 +144,16 @@
                                                     <td><%= (i + 1) %></td>
                                                     <td><%= data[i].especie %></td>
                                                     <td><%= data[i].familia %></td>
+                                                    <td><%= data[i].nombre_comun %></td>
                                                     <td><%= data[i].proyecto %></td>
                                                     <td><%= data[i].identificador %></td>
                                                     <td><%= data[i].departamento %></td>
                                                     <td><%= data[i].municipio %></td>
                                                     <td><%= data[i].localidad %></td>
                                                     <td><%= data[i].latitud %></td>
+                                                    <td><%= data[i].longitud %></td>
                                                     <td><%= data[i].autor %></td>
+                                                    <td><%= data[i].fecha_captura %></td>
                                                     <td><%= data[i].ecorregion %></td>
                                                     <td>
                                                         <a href="/actualizar/<%= data[i].id %>" class="btn btn-info">Actualizar</a>

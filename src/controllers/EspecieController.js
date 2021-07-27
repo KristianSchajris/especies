@@ -45,7 +45,7 @@ Especiecontroller.update = (req, res) => {
     const newEspecies = req.body;
 
     req.getConnection((err, conn) => {
-        conn.query('UPDATE  set ? where id = ?', [newEspecies, id], (err, rows) => {
+        conn.query('UPDATE especies set ? where id = ?', [newEspecies, id], (err, rows) => {
             res.redirect('/listar_espoecies');
         });
     });
