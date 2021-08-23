@@ -1,3 +1,4 @@
+
 const Especiecontroller = {};
 
 Especiecontroller.index = (req, res) => {
@@ -62,6 +63,6 @@ Especiecontroller.destroy = (req, res) => {
       });
     });
 
-}
+};
 
 module.exports = Especiecontroller;

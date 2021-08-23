@@ -7,6 +7,8 @@ const express = require('express'),
 const app = express();
 
 const especieRoutes = require('./routes/especies.js');
+const dbConnection  = require('./config/conn.js');
+
 
 app.set('port', process.env.PORT || 3000);
 app.set('view engine', 'ejs');
@@ -14,13 +16,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.use(morgan('dev'));
 
-app.use(myConnection(mysql, {
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    port: 3306,
-    database: 'especies_db'
-}, 'single'));
+app.use(myConnection(mysql, dbConnection, 'single'));
 
 app.use(express.urlencoded({extended: false}));
 
@@ -30,5 +26,5 @@ app.use('/', especieRoutes);
 
 
 app.listen(app.get('port'), () => {
-    console.log('escuchando en el puerto 3000')
+    console.log('listeng on port 3000')
 });
