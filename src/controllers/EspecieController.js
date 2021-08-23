@@ -64,22 +64,4 @@ Especiecontroller.destroy = (req, res) => {
 
 }
 
-/*
-speciecontroller.show = (req, res) => {
-    const { id } = req.params;
-    req.getConnection((err, conn) => {
-        conn.query('SELECT * FROM especies WHERE id = ?", [id], (err, especies) => {
-            if (err) {
-                res.json(err);
-            }
-            
-            res.render('especies', {
-                data: especies
-            });
-        });
-    });
-};
-
-*/
-
 module.exports = Especiecontroller;
